@@ -1,0 +1,102 @@
+{
+  "_notes": [
+    "Source: atholi_menu.pdf (20 pages). Prices in INR.",
+    "sizeLabels ['Full','Half','Quarter'] are an ASSUMPTION: the PDF shows three bare numbers. Confirm with the owner.",
+    "'charcoal' on Mazbi items is the second price line in the PDF under the word CHARCOAL. Confirm meaning with the owner.",
+    "Descriptions exist in the PDF for most items. Leave 'description' empty until entered in the CMS.",
+    "Fish items are 'As per size' (no fixed price).",
+    "PDF spells 'CEASER SALAD'; corrected here to 'Caesar Salad'."
+  ],
+  "sizeLabels": ["Full", "Half", "Quarter"],
+  "categories": [
+    { "slug": "soup", "title": "Soup", "intro": "A warm and flavourful selection of authentic Arabian soups, crafted to awaken your palate.",
+      "items": [
+        { "name": "Yamania Soup", "price": 150 },
+        { "name": "Lentil Soup", "price": 160 },
+        { "name": "Meat Ball Soup", "price": 180 }
+      ] },
+    { "slug": "salads", "title": "Salads", "intro": "Fresh, vibrant, and thoughtfully crafted with premium ingredients for a refreshing Arabian touch.",
+      "items": [
+        { "name": "Caesar Salad", "price": 250 },
+        { "name": "Grilled Chicken Salad", "price": 240 },
+        { "name": "Pacha Manga Pineapple Salad", "price": 160 },
+        { "name": "Raw Mango Salad", "price": 140 },
+        { "name": "Fattoush Salad", "price": 220 }
+      ] },
+    { "slug": "starters", "title": "Starters", "intro": "Bold flavours and irresistible bites to begin your Arabian dining experience.",
+      "items": [
+        { "name": "Fish Kothuvara", "price": 460, "badge": "Chef's special" },
+        { "name": "Lemon Pepper Fish with Mango Rice", "price": 360 },
+        { "name": "Dynamite Chicken", "price": 180 },
+        { "name": "Dynamite Prawns", "price": 240 },
+        { "name": "Sweet Chilli Wings", "price": 220 }
+      ] },
+    { "slug": "kabab", "title": "Kabab", "intro": "Succulent kababs expertly marinated with authentic Arabian spices and flame-grilled for a smoky, irresistible finish.",
+      "items": [
+        { "name": "Harissa Kabab", "price": 260 },
+        { "name": "Chilli Cheese", "price": 270 },
+        { "name": "Chicken Lehrathoon", "price": 260 },
+        { "name": "Joojeh Kabab", "price": 260 },
+        { "name": "Shish Tawuk", "price": 260 },
+        { "name": "Chicken Adnan Seekh Kabab", "price": 270, "group": "Irani Kabab" },
+        { "name": "Turkish Beef Seekh Kabab", "price": 280, "group": "Irani Kabab" },
+        { "name": "Adnan Seekh Kabab with Hummus", "variants": [{ "label": "Chicken", "price": 370 }, { "label": "Beef", "price": 380 }] },
+        { "name": "Lahami", "variants": [{ "label": "Mutton", "price": 430 }, { "label": "Beef", "price": 330 }] }
+      ] },
+    { "slug": "cold-mezze", "title": "Cold Mezze", "intro": "Authentic Arabian classics, prepared fresh to complement every meal with vibrant flavours.",
+      "items": [
+        { "name": "Cold Mezze Platter", "price": 590, "note": "Baba Ganoush, Fattoush, Muttabbal, Tabouleh, Hummus" },
+        { "name": "Baba Ganoush", "price": 250 },
+        { "name": "Muttabbal", "price": 220 },
+        { "name": "Fattoush", "price": 220 },
+        { "name": "Tabouleh", "price": 220 },
+        { "name": "Hummus", "price": 180 },
+        { "name": "Muhammara", "price": 260 }
+      ] },
+    { "slug": "mazbi", "title": "Mazbi", "sized": true, "intro": "Slow-cooked over charcoal and infused with authentic Arabian spices, our Mazbi is served with fragrant rice for a truly traditional feast.",
+      "items": [
+        { "name": "Sulthani", "prices": [910, 470, 245], "charcoal": [600, 300, 160] },
+        { "name": "Honey", "prices": [985, 500, 265], "charcoal": [665, 345, 195] },
+        { "name": "Peri Peri", "prices": [955, 485, 250], "charcoal": [640, 330, 180] },
+        { "name": "Pepper", "prices": [955, 485, 250], "charcoal": [640, 330, 180] },
+        { "name": "Gochu", "prices": [985, 500, 265], "charcoal": [665, 345, 195] },
+        { "name": "Creamy Chicken", "prices": [1070, 556, 284], "charcoal": [775, 400, 220] },
+        { "name": "Fil Fil", "prices": [985, 500, 265], "charcoal": [665, 345, 195] },
+        { "name": "Beef", "prices": [1030, 540, 275], "charcoal": [750, 370, 190] },
+        { "name": "Beef Ribs Mazbi", "prices": [560, 315], "charcoal": [400, 220] }
+      ] },
+    { "slug": "mandi", "title": "Mandi", "sized": true, "intro": "Authentic Arabian slow-cooked specialties served with fragrant Mandi rice.",
+      "items": [
+        { "name": "Chicken Mandi", "prices": [720, 370, 190] },
+        { "name": "Mutton Haneeth", "prices": [1890, 830] },
+        { "name": "Mandi Rice", "prices": [410, 210, 110] },
+        { "name": "Amber White Madhooth Mutton", "prices": [2080, 1080, 550] },
+        { "name": "Madhooth Chicken", "prices": [850, 440, 230] },
+        { "name": "Madfoon Chicken", "prices": [880, 450, 240] },
+        { "name": "Madhooth Beef", "prices": [910, 480, 280] }
+      ] },
+    { "slug": "fish", "title": "Fish",
+      "items": [
+        { "name": "2 in 1 Fish", "priceNote": "As per size" },
+        { "name": "Pepper Fish", "priceNote": "As per size" }
+      ] },
+    { "slug": "gravy-breads", "title": "Gravy & Breads", "intro": "Rich, slow-cooked Arabian gravies infused with authentic spices.",
+      "items": [
+        { "name": "Beef Marahi", "price": 240 },
+        { "name": "Rumali Roti", "price": 19 },
+        { "name": "Kubboos", "price": 10 }
+      ] },
+    { "slug": "platters", "title": "Platters",
+      "items": [
+        { "name": "Mix Grill Platter", "price": 699, "serves": "2 pax" },
+        { "name": "Majlis Platter", "price": 1199, "serves": "4 pax", "badge": "House platter" },
+        { "name": "Mega Platter", "price": 2399, "serves": "6 pax" }
+      ] }
+  ],
+  "branches": {
+    "kerala": ["Feroke-Petta", "Koduvally", "Kondotty", "Kottakkal", "Sarada Mandiram", "Tanur", "Tirurangadi", "Atholi", "Cherpulassery", "Edakkara", "Vengara", "Edavanna", "Nilambur", "Parambil Bazar", "Valanchery", "Ramanattukara"],
+    "tamilNadu": ["Coimbatore - Lakshmi Mills"],
+    "uae": ["Karama", "Qusais", "Sharjah - Muwaileh", "Abu Dhabi - Electra Street"],
+    "openingShortly": ["Kuniyamuthur", "Kochi - Kathrikkadavu", "Wandoor"]
+  }
+}

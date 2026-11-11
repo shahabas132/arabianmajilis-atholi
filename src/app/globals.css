@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green: #003A2F;
+  --color-green-bright: #25704A;
+  --color-sage: #D1DDD2;
+  --color-cream: #F0EDE4;
+  --color-clay: #8B5A3C;
+  --color-ink: #0B1F1A;
+  
+  --color-gold-light: #F4E58A;
+  --color-gold-mid: #D4A94A;
+  --color-gold-dark: #A87B2E;
+
+  --font-serif: var(--font-cormorant), "Ivy Presto", Cormorant Garamond, serif;
+  --font-sans: var(--font-jost), "The Future", Jost, sans-serif;
+}
+
+:root {
+  --background: #0B1F1A;
+  --foreground: #F0EDE4;
+  --brand-green: #003A2F;
+  --brand-green-bright: #25704A;
+  --brand-sage: #D1DDD2;
+  --brand-cream: #F0EDE4;
+  --brand-clay: #8B5A3C;
+  --brand-ink: #0B1F1A;
+}
+
+/* Fluid typography & reset */
+html {
+  background-color: #0B1F1A;
+  color: #F0EDE4;
+  font-family: var(--font-sans);
+  scroll-behavior: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #0B1F1A;
+  color: #F0EDE4;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+/* Sharp angular shapes - strict brand identity */
+button, a, input, select, textarea, div {
+  border-radius: 0;
+}
+
+/* Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(180deg, #F4E58A 0%, #D4A94A 55%, #A87B2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(180deg, #F4E58A 0%, #D4A94A 55%, #A87B2E 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(180deg, #F4E58A 0%, #D4A94A 50%, #A87B2E 100%) 1;
+}
+
+/* Dotted price leaders for menu */
+.price-leader {
+  flex-grow: 1;
+  border-bottom: 1px dotted rgba(209, 221, 210, 0.35);
+  margin: 0 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Selection */
+::selection {
+  background-color: #25704A;
+  color: #F0EDE4;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis-smooth {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Diamond cursor for fine pointers */
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Focus styles - visible gold focus ring */
+:focus-visible {
+  outline: 2px solid #D4A94A;
+  outline-offset: 3px;
+}
+
+/* Subtle luxury grain effect */
+.bg-grain {
+  background-image: radial-gradient(rgba(240, 237, 228, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
