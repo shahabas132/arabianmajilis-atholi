@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { Phone, Navigation, ShoppingBag, Menu as MenuIcon, X, Volume2, VolumeX, Download } from 'lucide-react';
+import { Phone, Navigation, ShoppingBag, Menu as MenuIcon, X } from 'lucide-react';
 import { Monogram } from '@/components/brand/Monogram';
 import { BrandDiamond } from '@/components/brand/BrandDiamond';
 
@@ -21,7 +21,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [soundEnabled, setSoundEnabled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +35,6 @@ export default function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
-
-  const toggleSound = () => {
-    setSoundEnabled(!soundEnabled);
-    // Visual / feedback cue
-  };
 
   return (
     <>
@@ -99,16 +93,6 @@ export default function Navbar() {
 
           {/* Desktop Right Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Ambient Sound Toggle */}
-            <button
-              onClick={toggleSound}
-              className="p-2 text-sage/60 hover:text-gold-mid transition-colors focus:outline-none"
-              title={soundEnabled ? 'Mute atmosphere' : 'Play atmosphere'}
-              aria-label={soundEnabled ? 'Mute atmosphere' : 'Play atmosphere'}
-            >
-              {soundEnabled ? <Volume2 size={18} /> : <VolumeX size={18} />}
-            </button>
-
             {/* Order Now CTA */}
             <Link
               href="/order"
@@ -121,14 +105,6 @@ export default function Navbar() {
 
           {/* Mobile / Tablet Actions */}
           <div className="flex lg:hidden items-center gap-3">
-            <button
-              onClick={toggleSound}
-              className="p-2 text-sage/70 hover:text-gold-mid"
-              aria-label="Toggle atmospheric sound"
-            >
-              {soundEnabled ? <Volume2 size={18} /> : <VolumeX size={18} />}
-            </button>
-
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-cream hover:text-gold-mid focus:outline-none"
@@ -180,24 +156,6 @@ export default function Navbar() {
                   </motion.div>
                 );
               })}
-
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.3 }}
-                className="pt-2"
-              >
-                <a
-                  href="/menu/atholi-menu.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-ink/40 border border-gold-mid/40 text-gold-light text-xs font-sans uppercase tracking-[0.2em] font-semibold"
-                >
-                  <Download size={14} />
-                  <span>Download Menu PDF</span>
-                </a>
-              </motion.div>
             </div>
 
             <div className="text-center text-xs tracking-widest text-sage/60 uppercase">

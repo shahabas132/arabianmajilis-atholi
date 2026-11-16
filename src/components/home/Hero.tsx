@@ -80,16 +80,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          <a
-            href="/menu/atholi-menu.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[11px] font-sans tracking-wider uppercase text-gold-mid/80 hover:text-gold-light transition-colors flex items-center gap-1.5 pt-1 self-center lg:self-start"
-          >
-            <span>Download Official Atholi Menu (PDF · 19 MB)</span>
-            <span>↓</span>
-          </a>
-
           {/* Key Metrics / Highlights */}
           <div className="pt-6 border-t border-sage/10 w-full grid grid-cols-3 gap-4 text-center lg:text-left">
             <div>

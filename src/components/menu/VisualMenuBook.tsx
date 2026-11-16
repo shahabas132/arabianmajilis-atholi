@@ -6,8 +6,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   ChevronLeft,
   ChevronRight,
-  Download,
-  ExternalLink,
   Grid,
   X,
   BookOpen,
@@ -172,7 +170,7 @@ export function VisualMenuBook() {
           </span>
         </div>
 
-        {/* Right: actions */}
+        {/* Right: actions — All Pages grid toggle only */}
         <div className="flex items-center gap-1.5">
           <button
             type="button"
@@ -186,23 +184,6 @@ export function VisualMenuBook() {
             <Grid size={12} />
             <span className="hidden sm:inline">Pages</span>
           </button>
-          <a
-            href="/menu/atholi-menu.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-2.5 py-1 text-[11px] font-sans uppercase tracking-wider bg-green/30 text-cream/70 hover:text-gold-light border border-sage/20 hover:border-gold-mid/40 flex items-center gap-1 transition-all"
-          >
-            <ExternalLink size={12} />
-            <span className="hidden sm:inline">PDF</span>
-          </a>
-          <a
-            href="/menu/atholi-menu.pdf"
-            download="Arabian-Majlis-Atholi-Menu.pdf"
-            className="px-3 py-1 text-[11px] font-sans uppercase tracking-wider font-semibold bg-gold-mid hover:bg-gold-light text-ink flex items-center gap-1 transition-all"
-          >
-            <Download size={12} />
-            <span>Save</span>
-          </a>
         </div>
       </div>
 
